@@ -11,7 +11,7 @@ class SalariedEmployee: public Employee {
 public:
     SalariedEmployee(const std::string &, const std::string &,
             const std::string &, double=0.0);
-    virtual ~SalariedEmployee(){};
+    virtual ~SalariedEmployee(){}
     void setWeeklySalary(double);
     double getWeeklySalary() const;
     virtual double earnings() const override ;

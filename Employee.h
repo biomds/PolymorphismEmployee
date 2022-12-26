@@ -10,7 +10,7 @@ class Employee {
 public:
     Employee(const std::string &, const std::string &,
     const std::string &);
-    virtual ~Employee(){};
+    virtual ~Employee(){}
     void setFirstName(const std::string &);
     std::string getFirstName()const;
     void setLastName(const std::string &);
