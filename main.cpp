@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include <iomanip>
+#include <ctime>
+#include <cstdlib>
 #include <vector>
 #include <typeinfo>
 #include "Employee.h"
@@ -13,8 +15,9 @@
 
 using namespace std;
 void virtualViaPointer(const Employee*const); // prototype
-void virtualVioReference(const Employee &); //prototype
+void virtualViaReference(const Employee &); //prototype
 void RTTIDynamicCasting(); //prototype
+int determineMonth(); //prototype
 int main()
 {
     cout << fixed << setprecision(2); // set floating-point output formatting
@@ -54,7 +57,7 @@ int main()
 
     for(const Employee *employeePtr:employees)
     {
-        virtualVioReference(*employeePtr);
+        virtualViaReference(*employeePtr);
     }
 
     // runtime type information (RTTI) and dynamic casting
@@ -68,7 +71,7 @@ void virtualViaPointer(const Employee* const baseClassPtr)
     cout <<"\nearned $" << baseClassPtr->earnings() << "\n\n";
 }
 
-void virtualVioReference(const Employee &baseClassPtr)
+void virtualViaReference(const Employee &baseClassPtr)
 {
     baseClassPtr.print();
     cout <<"\nearned $" << baseClassPtr.earnings() << "\n\n";
@@ -108,3 +111,14 @@ void RTTIDynamicCasting()
         delete employeePtr;
     }
 }
+
+int determineMonth()
+{
+    time_t currentTime;
+    char monthString[3];
+    time(&currentTime);
+    strftime(monthString, 3, "%m", localtime(&currentTime));
+    return atoi(monthString);
+
+}
+

@@ -23,3 +23,4 @@ private:
 
 
 #endif //CLION_SALARIEDEMPLOYEE_H
+
