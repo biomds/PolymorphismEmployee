@@ -8,8 +8,8 @@
 using namespace std;
 
 CommissionEmployee::CommissionEmployee(const string &first, const string &last, const string &ssn,
-        double sales, double rate)
-        :Employee(first, last, ssn)
+        int mn, int dy, int yr, double sales, double rate)
+        :Employee(first, last, ssn, mn, dy, yr)
 
 {
     setGrossSales(sales);
@@ -48,9 +48,9 @@ double CommissionEmployee::getCommissionRate() const
     return commissionRate;
 } // end function getCommissionRate
 
-double CommissionEmployee::earnings() const
-{
-    return getCommissionRate() * getGrossSales();
+double CommissionEmployee::earnings() const {
+    double earnings = getCommissionRate() * getGrossSales();
+    return earnings;
 }
 
 void CommissionEmployee::print() const

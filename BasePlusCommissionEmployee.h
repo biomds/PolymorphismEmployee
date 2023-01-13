@@ -9,7 +9,7 @@
 class BasePlusCommissionEmployee: public CommissionEmployee {
 public:
     BasePlusCommissionEmployee(const std::string &, const std::string &,
-            const std::string &, double = 0.0, double = 0.0, double = 0.0);
+            const std::string &, int, int, int, double = 0.0, double = 0.0, double = 0.0);
     virtual ~BasePlusCommissionEmployee(){}
     void setBaseSalary(double);
     double getBaseSalary() const;

@@ -7,8 +7,9 @@
 
 using namespace std;
 
-SalariedEmployee::SalariedEmployee(const string &first, const string &last, const string &ssn, double salary)
-:Employee(first, last, ssn)
+SalariedEmployee::SalariedEmployee(const string &first, const string &last, const string &ssn,
+        int mn, int dy, int yr, double salary)
+:Employee(first, last, ssn, mn, dy, yr)
 {
  setWeeklySalary(salary);
 }
@@ -27,9 +28,9 @@ double SalariedEmployee::getWeeklySalary() const
     return weeklySalary;
 }
 
-double SalariedEmployee::earnings() const
-{
-    return getWeeklySalary();
+double SalariedEmployee::earnings() const {
+    double earnings = getWeeklySalary();
+    return earnings;
 }
 
 void SalariedEmployee::print() const

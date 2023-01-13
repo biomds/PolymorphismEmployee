@@ -8,8 +8,8 @@
 using namespace std;
 
 BasePlusCommissionEmployee::BasePlusCommissionEmployee(const string &first, const string &last,
-        const string &ssn, double sales, double rate, double salary)
-        :CommissionEmployee(first, last, ssn, sales, rate)
+        const string &ssn, int mn, int dy, int yr, double sales, double rate, double salary)
+        :CommissionEmployee(first, last, ssn, mn, dy, yr, sales, rate)
 {
     setBaseSalary(salary);
 };
@@ -28,9 +28,9 @@ double BasePlusCommissionEmployee::getBaseSalary() const
     return baseSalary;
 }
 
-double BasePlusCommissionEmployee::earnings() const
-{
-    return getBaseSalary() + CommissionEmployee::earnings();
+double BasePlusCommissionEmployee::earnings() const {
+    double earnings = getBaseSalary() + CommissionEmployee::earnings();
+    return earnings;
 }
 
 void BasePlusCommissionEmployee::print() const
