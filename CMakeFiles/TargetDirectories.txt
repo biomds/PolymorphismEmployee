@@ -1,3 +1,0 @@
-/dssg/home/cln04/02.scripts/Clion/Polymorphism/Employee/CMakeFiles/Employee.dir
-/dssg/home/cln04/02.scripts/Clion/Polymorphism/Employee/CMakeFiles/edit_cache.dir
-/dssg/home/cln04/02.scripts/Clion/Polymorphism/Employee/CMakeFiles/rebuild_cache.dir
